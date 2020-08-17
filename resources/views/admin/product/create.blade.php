@@ -102,6 +102,14 @@
 			</div>
 			<div class="row">
 				<div class="col-25">
+					<label for="old_price">Old Price</label>
+				</div>
+				<div class="col-75">
+					<input type="text" name="old_price">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
 					<label for="price">Quantity</label>
 				</div>
 				<div class="col-75">

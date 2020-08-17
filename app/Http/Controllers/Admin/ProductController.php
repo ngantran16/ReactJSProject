@@ -19,9 +19,10 @@ class ProductController extends Controller
     function createProduct(){
         return view('admin.product.create');
     }
-    function storeProduct(Request $request){
+     function storeProduct(Request $request){
         $name = $request->name;
         $price = $request->price;
+        $old_price = $request->old_price;
         $quantity = $request->quantity;
         $sale = $request->sale;
         $image = $request->file("image")->store("public");
@@ -29,6 +30,7 @@ class ProductController extends Controller
         $product = new Product;
         $product->name = $name;
         $product->price = $price;
+        $product->old_price = $old_price;
         $product->quantity = $quantity;
         $product->sale = $sale;
         $product->image = $image;
